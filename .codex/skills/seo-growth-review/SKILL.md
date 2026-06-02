@@ -17,8 +17,8 @@ If a template is absent, use these fallback headings:
 - Previous baseline or growth-review artifact when available
 
 ## Procedure
-1. Require user-supplied Search Console and Vercel Analytics observations. If either input is missing, report the missing inputs explicitly and never invent values.
-2. Allow a partial-evidence review when only some observations are supplied. Label the limitations and avoid conclusions not supported by the available data.
+1. If no Search Console observations and no Vercel Analytics observations are supplied, stop and request inputs. Never invent values.
+2. If only one source or partial observations are supplied, perform a limited review. Label missing inputs and limitations, and avoid conclusions not supported by the available data.
 3. Record the observation date range.
 4. Separate observed facts from hypotheses.
 5. Identify indexing failures before ranking experiments.
