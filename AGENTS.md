@@ -31,7 +31,7 @@ When the user asks to start or build the SEO project:
 - No GA4 dependency
 
 ## External Operations
-GitHub, Vercel, and Google Search Console actions may require authentication. Perform operations when credentials and tools are available. Otherwise create a precise manual action list and wait for the user's result.
+GitHub, Vercel, and Google Search Console actions may require authentication. Run read-only checks when tools are available. State-changing operations, including GitHub pushes, Vercel deployments, Search Console indexing submissions, and property changes, require an explicit user request or confirmation in the current interaction. If tools are unavailable or a state-changing operation is not approved, create a precise manual action list and wait for the user's result.
 
 ## Trigger Phrases
 | User request | Action |
