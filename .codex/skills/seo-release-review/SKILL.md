@@ -9,7 +9,7 @@ Read `.codex/roles/technical-seo-reviewer.md`.
 
 ## Preconditions
 1. Create `_workspace/` if it does not exist.
-2. Require `_workspace/04_site_blueprint.md` before URL review. If it is missing, stop to request or generate the blueprint. Do not invent expected URLs.
+2. Require `_workspace/04_site_blueprint.md` before any review. If it is missing, stop and hand off to the site-architecture workflow. Do not generate the blueprint inside release review or invent expected URLs.
 3. When present, read and copy `_workspace/templates/05_release_review.md` and `_workspace/templates/06_manual_actions.md`. Otherwise use these fallback headings:
    - `_workspace/05_release_review.md`: `# SEO Release Review`, `## Review Date`, `## Target`, `## Official Sources Checked`, `## Summary`, `## Findings`, `## URL Matrix`, `## Manual Follow-Up`
    - `_workspace/06_manual_actions.md`: `# Manual Actions`, `## GitHub`, `## Vercel`, `## Google Search Console`, `## Verification Results to Return`
@@ -36,6 +36,15 @@ Check these official pages at review time and record the review date:
 6. Generate Google Search Console manual actions: property registration, sitemap submission, URL Inspection, indexing request, and later query-impression review. Include `## Verification Results to Return` in `_workspace/06_manual_actions.md`.
 7. Write `_workspace/05_release_review.md`, `_workspace/05_release_review.json`, and `_workspace/06_manual_actions.md`.
 8. Do not claim release completion while any FAIL remains.
+
+## JSON Schema
+Write `_workspace/05_release_review.json` with:
+- `reviewDate`
+- `target`
+- `officialSourcesChecked` array
+- `summary` object with `pass`, `warn`, `fail`, and `manual` counts
+- `findings` array with `status`, `check`, `url`, `evidence`, and `recommendation`
+- `manualActions` array
 
 ## Source Policy
 Official documentation overrides third-party summaries. If current official documentation cannot be checked, report the limitation and do not claim a current-document review.
