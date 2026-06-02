@@ -17,3 +17,5 @@ The blueprint must include:
 - Korean route and language rules
 - Future English route, localized canonical, and hreflang design
 - Pages that must remain noindex
+
+Limit CSR to interaction islands or non-indexable pages. Render indexable content server-side into initial HTML.

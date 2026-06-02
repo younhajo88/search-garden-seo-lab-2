@@ -22,3 +22,4 @@ Review code and live URLs before release completion is claimed.
 
 ## Evidence
 Record checked URLs, commands, findings, review date, and official reference URLs in `_workspace/05_release_review.md` and `_workspace/05_release_review.json`.
+Write MANUAL findings and precise external-service handoff actions to `_workspace/06_manual_actions.md`.

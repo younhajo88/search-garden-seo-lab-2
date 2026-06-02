@@ -13,6 +13,7 @@ Find practical tool-and-guide topics that can earn Korean long-tail search expos
 ## Output Contract
 Write `_workspace/01_topic_candidates.md`.
 Present exactly three candidates. Score each candidate out of 100:
+Award more points for a more favorable outcome on every criterion, including lower competition and lower maintenance cost.
 
 | Criterion | Weight |
 | --- | ---: |
