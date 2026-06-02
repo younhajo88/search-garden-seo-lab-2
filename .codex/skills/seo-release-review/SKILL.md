@@ -5,7 +5,14 @@ description: Use when reviewing a local or deployed Next.js site before claiming
 
 # SEO Release Review
 
-Read `.codex/roles/technical-seo-reviewer.md` and `_workspace/templates/05_release_review.md`.
+Read `.codex/roles/technical-seo-reviewer.md`.
+
+## Preconditions
+1. Create `_workspace/` if it does not exist.
+2. Require `_workspace/04_site_blueprint.md` before URL review. If it is missing, stop to request or generate the blueprint. Do not invent expected URLs.
+3. When present, read and copy `_workspace/templates/05_release_review.md` and `_workspace/templates/06_manual_actions.md`. Otherwise use these fallback headings:
+   - `_workspace/05_release_review.md`: `# SEO Release Review`, `## Review Date`, `## Target`, `## Official Sources Checked`, `## Summary`, `## Findings`, `## URL Matrix`, `## Manual Follow-Up`
+   - `_workspace/06_manual_actions.md`: `# Manual Actions`, `## GitHub`, `## Vercel`, `## Google Search Console`, `## Verification Results to Return`
 
 ## Current Official Sources
 Check these official pages at review time and record the review date:
@@ -14,7 +21,7 @@ Check these official pages at review time and record the review date:
 - https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
 - https://developers.google.com/search/docs/appearance/core-web-vitals
 - https://developers.google.com/search/docs/specialty/international/localized-versions
-- https://developers.google.com/search/docs/appearance/structured-data/general-guidelines
+- https://developers.google.com/search/docs/appearance/structured-data/sd-policies
 - https://developers.google.com/search/docs/appearance/favicon-in-search
 - https://nextjs.org/docs/app/getting-started/metadata-and-og-images
 - https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
@@ -26,7 +33,7 @@ Check these official pages at review time and record the review date:
 3. If a local or production URL is available, fetch every expected public URL plus `/robots.txt` and `/sitemap.xml`.
 4. Check HTTP status, HTML title, description, canonical URL, h1, important body text, crawlable links, language, and structured-data consistency.
 5. Record mobile Core Web Vitals or PageSpeed observations when available.
-6. Generate Google Search Console manual actions: property registration, sitemap submission, URL Inspection, indexing request, and later query-impression review.
+6. Generate Google Search Console manual actions: property registration, sitemap submission, URL Inspection, indexing request, and later query-impression review. Include `## Verification Results to Return` in `_workspace/06_manual_actions.md`.
 7. Write `_workspace/05_release_review.md`, `_workspace/05_release_review.json`, and `_workspace/06_manual_actions.md`.
 8. Do not claim release completion while any FAIL remains.
 
