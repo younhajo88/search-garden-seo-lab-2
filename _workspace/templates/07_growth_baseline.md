@@ -14,3 +14,9 @@
 
 ## Hypotheses
 <!-- Record testable hypotheses separately from facts. -->
+
+## Immediate Fixes
+<!-- List the smallest evidence-based fixes. -->
+
+## Experiments
+<!-- List experiments that need another observation window. -->

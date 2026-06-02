@@ -15,6 +15,9 @@
 ## Metadata Plan
 <!-- Record unique title, description, canonical path, and representative h1 per indexable URL. -->
 
+## Korean Routes and Language Rules
+<!-- Record Korean route conventions and language settings. -->
+
 ## Rendering Plan
 <!-- Choose SSG, ISR, SSR, or CSR per page with a short reason. -->
 
