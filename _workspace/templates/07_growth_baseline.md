@@ -15,6 +15,9 @@
 ## Hypotheses
 <!-- Record testable hypotheses separately from facts. -->
 
+## Limitations
+<!-- Record missing inputs and interpretation limits. -->
+
 ## Immediate Fixes
 <!-- List the smallest evidence-based fixes. -->
 
