@@ -131,6 +131,36 @@ foreach ($file in $requiredText.Keys) {
   }
 }
 
+$agentsPath = Get-RepoPath "AGENTS.md"
+if (Test-Path -LiteralPath $agentsPath) {
+  $agentsContent = Get-Content -Raw -LiteralPath $agentsPath
+  $requiredTriggerRows = @(
+    '| "SEO 프로젝트 시작해줘" | Run the full `seo-site-production` workflow |',
+    '| "주제 다시 조사해줘" | Run `topic-discovery` only |',
+    '| "SEO 검수해줘" | Run `seo-release-review` |',
+    '| "배포 후 확인해줘" | Run production URL review and generate Search Console actions |',
+    '| "SEO 개선점 찾아줘" | Run `seo-growth-review` |'
+  )
+
+  foreach ($row in $requiredTriggerRows) {
+    if (-not $agentsContent.Contains($row)) {
+      Add-ValidationFailure "Missing exact trigger table row in AGENTS.md: $row"
+    }
+  }
+
+  $triggerSection = ($agentsContent -split '(?m)^## Trigger Phrases\s*$')[1]
+  if ([string]::IsNullOrWhiteSpace($triggerSection)) {
+    Add-ValidationFailure "Missing Trigger Phrases section in AGENTS.md"
+  } else {
+    $triggerTableRows = $triggerSection -split '\r?\n' | Where-Object { $_.Trim().StartsWith("|") }
+    foreach ($row in $triggerTableRows) {
+      if ($row -notmatch '^\| [^|]+ \| [^|]+ \|$') {
+        Add-ValidationFailure "Malformed trigger table row in AGENTS.md: $row"
+      }
+    }
+  }
+}
+
 $requiredMetadata = @{
   ".codex/skills/seo-site-production/agents/openai.yaml" = "seo-site-production"
   ".codex/skills/topic-discovery/agents/openai.yaml" = "topic-discovery"
