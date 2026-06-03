@@ -1,0 +1,4 @@
+interface:
+  display_name: "Technical SEO"
+  short_description: "Apply Next.js App Router SEO requirements"
+  default_prompt: "Use $technical-seo to apply the technical SEO checklist to the approved Next.js site blueprint."

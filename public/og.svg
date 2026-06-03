@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6f3ec"/>
+  <circle cx="210" cy="140" r="180" fill="#d8eadf"/>
+  <rect x="700" y="150" width="250" height="220" rx="28" fill="#1f6f5b"/>
+  <path d="M700 150l125-72 125 72-125 72z" fill="#e4d8c5"/>
+  <text x="88" y="188" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#1f6f5b">소포정원</text>
+  <text x="88" y="294" font-family="Arial, sans-serif" font-size="86" font-weight="900" fill="#26211b">우체국 택배</text>
+  <text x="88" y="390" font-family="Arial, sans-serif" font-size="86" font-weight="900" fill="#26211b">요금 계산기</text>
+  <text x="92" y="470" font-family="Arial, sans-serif" font-size="34" fill="#6d6258">박스 크기와 무게로 소포 요금 구간 확인</text>
+</svg>
+

@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO Site Production"
+  short_description: "Run the repository SEO experiment workflow"
+  default_prompt: "Use $seo-site-production to start the Korean-first Next.js SEO experiment workflow and stop for topic approval before implementation."

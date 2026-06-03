@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO Growth Review"
+  short_description: "Analyze SEO observations after release"
+  default_prompt: "Use $seo-growth-review to analyze Search Console and Vercel Analytics observations and recommend the smallest useful SEO improvements."

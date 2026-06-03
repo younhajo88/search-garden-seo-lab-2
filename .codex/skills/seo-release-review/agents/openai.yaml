@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO Release Review"
+  short_description: "Review SEO readiness against official guidance"
+  default_prompt: "Use $seo-release-review to review the local or deployed Next.js site for SEO release readiness."

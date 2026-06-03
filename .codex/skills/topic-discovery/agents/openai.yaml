@@ -1,0 +1,4 @@
+interface:
+  display_name: "Topic Discovery"
+  short_description: "Research Korean long-tail SEO project topics"
+  default_prompt: "Use $topic-discovery to research three practical Korean long-tail SEO project topics and stop for approval."
