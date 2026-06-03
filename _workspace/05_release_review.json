@@ -1,0 +1,76 @@
+{
+  "reviewDate": "2026-06-03",
+  "target": {
+    "local": "http://localhost:3100",
+    "productionCanonicalBase": "https://search-garden-seo-lab-2.vercel.app"
+  },
+  "officialSourcesChecked": [
+    "https://developers.google.com/search/docs/essentials",
+    "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+    "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+    "https://developers.google.com/search/docs/appearance/core-web-vitals",
+    "https://developers.google.com/search/docs/specialty/international/localized-versions",
+    "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+    "https://developers.google.com/search/docs/appearance/favicon-in-search",
+    "https://nextjs.org/docs/app/getting-started/metadata-and-og-images",
+    "https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap",
+    "https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots"
+  ],
+  "summary": {
+    "pass": 12,
+    "warn": 2,
+    "fail": 0,
+    "manual": 4
+  },
+  "findings": [
+    {
+      "status": "PASS",
+      "check": "Build, typecheck, lint, and audit",
+      "url": "local",
+      "evidence": "npm run build, npm run typecheck, npm run lint, and npm audit --audit-level=moderate passed.",
+      "recommendation": "Run again before deployment."
+    },
+    {
+      "status": "PASS",
+      "check": "Public URL SEO basics",
+      "url": "all blueprint URLs",
+      "evidence": "All seven public URLs returned 200 with title, description, canonical, h1, and Korean body content.",
+      "recommendation": "Recheck after production deployment."
+    },
+    {
+      "status": "PASS",
+      "check": "Sitemap and robots",
+      "url": "/sitemap.xml and /robots.txt",
+      "evidence": "Sitemap includes all public URLs; robots allows public pages and disallows /api/.",
+      "recommendation": "Submit production sitemap in Search Console."
+    },
+    {
+      "status": "WARN",
+      "check": "Browser visual inspection",
+      "url": "local",
+      "evidence": "In-app Browser tool was unavailable.",
+      "recommendation": "Manually inspect local or deployed UI if visual polish matters before release."
+    },
+    {
+      "status": "WARN",
+      "check": "Core Web Vitals",
+      "url": "production pending",
+      "evidence": "No production field or lab URL exists yet.",
+      "recommendation": "Run PageSpeed or Vercel Speed Insights after deployment."
+    },
+    {
+      "status": "MANUAL",
+      "check": "Deployment and Search Console",
+      "url": "production pending",
+      "evidence": "Requires authenticated state-changing operations.",
+      "recommendation": "Follow _workspace/06_manual_actions.md."
+    }
+  ],
+  "manualActions": [
+    "Confirm GitHub push/PR or merge strategy.",
+    "Confirm Vercel deployment.",
+    "Register Google Search Console URL-prefix property.",
+    "Submit sitemap and request indexing for key URLs."
+  ]
+}
+
