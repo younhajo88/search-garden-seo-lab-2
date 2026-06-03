@@ -4,3 +4,5 @@ node_modules/
 .next-server.pid
 tsconfig.tsbuildinfo
 *.tsbuildinfo
+
+.vercel
